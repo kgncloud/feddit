@@ -2,7 +2,7 @@
 FROM node:18-bullseye-slim
 
 # Video support dependency
-RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg=7:4.4.2-0ubuntu0.22.04.1 wget=1.21.2-2ubuntu1 && apt-get clean \
+RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg=7:4.3.4-0+deb11u1 wget=1.21-1+deb11u1 && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
 # Install NPM dependencies and copy the project
