@@ -2,7 +2,7 @@
 FROM node:14.17-slim
 
 # Video support dependency
-RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg wget && apt-get clean \
+RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg=7:4.4.2-0ubuntu0.22.04.1 wget=1.21.2-2ubuntu1 && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
 # Install NPM dependencies and copy the project
